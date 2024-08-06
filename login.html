@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Login page</title>
+        <style>
+            body{
+                background-image: url("air1.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+               
+            } 
+            h1{
+                    color:rgb(102, 16, 16);
+                }
+
+            table{
+                box-shadow:10px 10px 10px 10px  rgba(87, 1, 1, 0);
+                border-spacing: 10px;
+                font-size: 30px;
+                padding: 3%;
+            }
+            table tr td{
+               text-align: right;
+            }
+            button{
+                text-align: center;
+                height:40px;
+                width: 60px;
+            }
+           
+            button:hover {
+                background-color: limegreen ;
+            }
+            table tr td a{
+                font-size: medium;
+            }
+            a:hover{
+                color:yellow;
+            }
+            h3{
+                 color:white;
+            }
+            footer{
+                color: beige;
+            }
+        </style>
+   
+
+    <script>
+    function loginvalidation(){
+        var uname=document.myform.username.value;
+        var password=document.myform.password.value;
+        if(uname==null && uname==" " ){
+            alert("Name cant be blank")
+            return false;
+        }
+        else if(password.length<6){
+            alert("password Must Be 6 Letters")
+            return false;
+        }
+        return true
+    }
+    </script>
+</head>
+    <body ><center>
+        <h2>Login page</h2>
+        <form name="myform" action="Airlanes.html" onsubmit= "return loginvalidation(this)">
+         Username:<input type="text" name="username"> <br>
+         password:<input type="password" name="password"> <br>
+         <input type="submit" value="submit">
+        </form>
+        <p> Dont have account sign up below</p>
+        <form action="regitser.html">
+        <button>sign up</button>
+        </form>
+</center>
+
+    </body>
+</html>
